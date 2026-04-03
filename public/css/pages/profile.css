@@ -1,0 +1,31 @@
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+
+.profile-avatar-small {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: inline-block;
+  margin-bottom: 6px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#account-edit-fields {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+#account-edit-fields.show {
+  max-height: 500px;
+  opacity: 1;
+}

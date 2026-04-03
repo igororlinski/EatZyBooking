@@ -1,0 +1,60 @@
+name: eatzy 
+
+services:
+ 
+  postgres:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/sql/create.sql:/docker-entrypoint-initdb.d/01_create.sql
+      - ./database/sql/populate.sql:/docker-entrypoint-initdb.d/02_populate.sql
+ 
+  pgadmin:
+    image: dpage/pgadmin4:9
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    ports:
+      - "4321:80"
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+ 
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8001:80"
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: postgres
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+      DB_SCHEMA: Eatzy
+    volumes:
+      - .:/var/www
+      - /var/www/vendor
+    depends_on:
+      - postgres
+ 
+volumes:
+  postgres_data:
+    driver: local
+  pgadmin_data:
+    driver: local

@@ -1,0 +1,110 @@
+#content label {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #115e59;
+}
+
+#content>form,
+form.card-form {
+  margin: 1.5rem auto 0 auto;
+  padding: 1.5rem 1.6rem 1.7rem;
+  max-width: 480px;
+  border-radius: 0.9rem;
+  border: 1px solid #d1fae5;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+#content>form input,
+#content>form textarea,
+form.card-form input,
+form.card-form textarea {
+  background-color: #ecfeff;
+  border-radius: 0.7rem;
+  border: 1px solid #99f6e4;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+#content>form input:focus,
+#content>form textarea:focus,
+form.card-form input:focus,
+form.card-form textarea:focus {
+  background-color: #ffffff;
+  outline: none;
+  border-color: #14b8a6;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25);
+}
+
+#content>form .success {
+  font-weight: 600;
+  color: #15803d;
+}
+
+#content .error,
+#content span.error {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #b91c1c;
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.review-form textarea,
+.reply-form textarea,
+.restaurant-card textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #111827;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: all 0.18s ease;
+}
+
+.review-form textarea:focus,
+.reply-form textarea:focus,
+.restaurant-card textarea:focus {
+  background: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  outline: none;
+}
+
+.reply-form {
+  margin-top: 1rem !important;
+  padding: 1.2rem 1.3rem !important;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.reply-form label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 25em) {
+  #content>form,
+  form.card-form {
+    margin: 0;
+    max-width: 25em;
+  }
+}

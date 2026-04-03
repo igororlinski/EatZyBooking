@@ -1,0 +1,194 @@
+.restaurant-list,
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.restaurant-card,
+#cards article.card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(20, 184, 166, 0.1);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-card::before,
+#cards article.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #14b8a6 0%, #0d9488 50%, #0f766e 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.restaurant-card:hover,
+#cards article.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 24px -8px rgba(0, 0, 0, 0.12),
+    0 20px 40px -12px rgba(13, 148, 136, 0.2);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+.restaurant-card:hover::before,
+#cards article.card:hover::before {
+  opacity: 1;
+}
+
+.restaurant-card h3,
+#cards article.card header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.restaurant-card p,
+#cards article.card p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #4b5563;
+}
+
+.restaurant-card .meta {
+  font-size: 1.1rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 0.9rem 1rem;
+  margin-top: 0.8rem;
+  border-radius: 10px;
+}
+
+.restaurant-card .actions,
+#cards article.card .actions {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(to bottom, transparent, #ffffff 30%);
+}
+
+.restaurant-card {
+  padding: 1.6rem 1.7rem !important;
+  border-radius: 1rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.restaurant-card .actions .button,
+.reply-form .button,
+.review-form .button {
+  margin-top: 0.6rem;
+}
+
+#cards article.card header a.delete {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  color: #b91c1c;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+#cards article.card header:hover a.delete {
+  opacity: 1;
+}
+
+/* Auth Card */
+.auth-card {
+  max-width: 440px;
+  margin: 3rem auto;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 1.25rem;
+  padding: 2rem 2.25rem 2.5rem;
+  box-shadow:
+    0 10px 30px -5px rgba(0, 0, 0, 0.1),
+    0 20px 50px -10px rgba(13, 148, 136, 0.15);
+  border: 1px solid rgba(20, 184, 166, 0.15);
+  position: relative;
+}
+
+.auth-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #14b8a6 0%, #0d9488 50%, #0f766e 100%);
+}
+
+.auth-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.auth-card p.subtitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* Team Card */
+.team-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.team-card {
+  flex: 1;
+  min-width: 220px;
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.team-avatar span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.team-card h4 {
+  margin: 0 0 0.25rem;
+}
+
+.team-card p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+}

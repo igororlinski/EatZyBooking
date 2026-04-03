@@ -1,0 +1,18 @@
+@import 'base.css';
+@import 'layout.css';
+@import 'utilities.css';
+ 
+@import 'components/buttons.css';
+@import 'components/forms.css';
+@import 'components/cards.css';
+@import 'components/tables.css';
+@import 'components/alerts.css';
+@import 'components/dropdown.css';
+@import 'components/tooltip.css';
+@import 'components/skeleton.css';
+ 
+@import 'pages/restaurants.css';
+@import 'pages/reservations.css';
+@import 'pages/profile.css';
+@import 'pages/errors.css';
+@import 'pages/notifications.css';
