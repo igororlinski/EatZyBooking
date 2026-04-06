@@ -1,6 +1,6 @@
     <div class="opening-hours">
         <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <h4 style="margin: 0;">Opening Hours</h4>
+            <h4 style="margin: 0;"><strong>Opening Hours</strong></h4>
             <div class="tooltip" style="display: flex; align-items: center;">
                 ⓘ
                 <span class="tooltip-text">You can only book a table during the restaurant's opening hours</span>

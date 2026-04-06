@@ -1,15 +1,19 @@
-# Docker details
 
-# Access credentials
 
-## Admin account: 
+
+
+
+
+## Access credentials
+
+### Example of an admin account: 
 admin@eatz.com
 adminpass
 
-## Customer account:
+### Example of a customer account:
 grace@email.com
 userpass
 
-## Owner account:
+### Example of an owner account:
 eve@cozy.com
 ownerpass

@@ -41,7 +41,7 @@
                     @auth
                         @if(Auth::user()->isCustomer())
                             <a href="{{ route('reservations.create', $restaurant->id) }}" class="button"
-                                style="background: linear-gradient(135deg, #6366f1, #4f46e5);">Make Reservation</a>
+                                style="background: linear-gradient(135deg, #6366f1, #4f46e5);">Book a table</a>
                         @endif
                     @endauth
                 </div>

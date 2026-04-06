@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('styles')
 
-    <script src="{{ asset('js/favourite.js') }}"></script>
+    <script src="{{ asset('js/favourite.js') }}" defer></script>
+    <script src="{{ asset('js/star-rating.js') }}" defer></script>
 </head>
 
 <body>

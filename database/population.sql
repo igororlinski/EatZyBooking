@@ -32,19 +32,19 @@ INSERT INTO "customer" (id) VALUES (7), (8), (9), (10), (11), (12), (13);
 -- 3. RESTAURANTS
 INSERT INTO "restaurant" (owner_id, name, description, email, phone_number, address, opening_hours, capacity)
 VALUES
-    (3, 'The Gourmet Place', 'A fine dining experience.', 'contact@gourmetplace.com', '111222333', '123 Gourmet Street, Krakow', 
+    (3, 'The Gourmet Place', 'Our restaurant has 2 Michelin Stars. We serve you an experience, not just food.', 'contact@gourmetplace.com', '111222333', '123 Gourmet Street, Krakow', 
     '{"mon":["12:00-15:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["12:00-15:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 40),
     
-    (4, 'Pizza Heaven', 'Authentic Italian pizza.', 'ciao@pizzaheaven.com', '444555666', '456 Pizza Avenue, Krakow', 
+    (4, 'Pizza Heaven', 'Authentic Neapolitan pizza and Italian wine. Free deliveries above 60 złotych.', 'ciao@pizzaheaven.com', '444555666', '456 Pizza Avenue, Krakow', 
     '{"mon":["12:00-15:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["12:00-15:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 60),
     
-    (4, 'Pasta Palace', 'Homemade pasta.', 'info@pastapalace.com', '777888999', '789 Pasta Lane, Krakow', 
+    (4, 'Pasta Palace', 'Best ever homemade pasta, with original D.O.P. ingridients. Come check us out, -20% for first time customers!', 'info@pastapalace.com', '777888999', '789 Pasta Lane, Krakow', 
     '{"mon":["12:00-15:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["12:00-18:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 50),
     
-    (5, 'The Cozy Corner', 'A charming cafe.', 'hello@cozycorner.com', '123456789', '1 Cafe Street, Krakow', 
+    (5, 'The Cozy Corner', 'A charming bistro in the heart of the Kazimierz district. Jazz music and cozy interior is what we love the most. Jam sessions every Friday at 5 pm.', 'hello@cozycorner.com', '123456789', '1 Cafe Street, Krakow', 
     '{"mon":["11:00-17:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["12:00-15:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 20),
     
-    (6, 'Sushi Central', 'Fresh sushi.', 'sushi@central.com', '987654321', '2 Sushi Boulevard, Krakow', 
+    (6, 'Sushi Central', 'Over 80 different sushi rolls, the best sushi spot in town! Discounts for students and for big family card holders.', 'sushi@central.com', '987654321', '2 Sushi Boulevard, Krakow', 
     '{"mon":["10:00-16:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["10:00-15:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 70);
 
 -- 4. PHOTOS
@@ -59,7 +59,6 @@ INSERT INTO restaurant_photo (restaurant_id, link, title, price, display_order) 
 (2, 'restaurant_photos/r2_photo2.png', 'Spiratta - burrata and spinach pizza', 14.99, 2),
 (3, 'restaurant_photos/r3_photo2.png', 'Avocado toast', 5.5, 1),
 (4, 'restaurant_photos/r4_photo1.png', 'Classic burger', 9.6, 1),
-(4, 'restaurant_photos/r4_photo2.png', 'Our delicious loaded nachos', 6.5, 2),
 (4, 'restaurant_photos/r4_photo3.png', 'Fries with garlic sauce', 3.5, 3),
 (4, 'restaurant_photos/r4_photo4.png', 'Fresh lemonade', 3.99, 4),
 (4, 'restaurant_photos/r4_photo5.png', 'Bufallo chicken', 7, 5),
@@ -71,12 +70,12 @@ INSERT INTO restaurant_photo (restaurant_id, link, title, price, display_order) 
 -- 5. RESERVATIONS
 INSERT INTO reservation (user_id, restaurant_id, number_of_people, date_of_visit, time_of_visit, is_confirmed, is_completed, title, description, created_at) VALUES
 (7, 1, 2, '2025-03-12', '19:00:00', true, true, 'Anniversary Dinner', 'Celebrating our 5th anniversary', '2025-03-10'),
-(8, 2, 4, '2025-04-14', '18:30:00', true, true, 'Family Dinner', 'Birthday celebration for my daughter', '2025-04-10'),
+(8, 4, 4, '2025-04-14', '18:30:00', true, true, 'Family Dinner', 'Birthday celebration for my daughter', '2025-04-10'),
 (9, 1, 2, '2025-05-13', '19:30:00', true, true, 'Date Night', NULL, '2025-05-10'),
 (10, 3, 2, '2025-06-11', '13:00:00', true, true, 'Lunch Meeting', 'Business lunch with client', '2025-06-09'),
-(7, 3, 2, '2025-03-14', '14:00:00', true, true, 'Dinner Reservation', NULL, '2025-03-10'),
+(7, 4, 2, '2025-03-14', '14:00:00', true, true, 'Dinner Reservation', NULL, '2025-03-10'),
 (8, 1, 2, '2025-03-17', '19:00:00', true, true, 'Special Dinner', 'Special occasion dinner', '2025-03-15'),
-(9, 2, 3, '2025-04-16', '18:30:00', true, true, 'Friends Gathering', NULL, '2025-04-10'),
+(9, 4, 3, '2025-04-16', '18:30:00', true, true, 'Friends Gathering', NULL, '2025-04-10'),
 (10, 2, 2, '2025-03-18', '12:30:00', true, true, 'Casual Dinner', NULL, '2025-03-15');
 
 INSERT INTO reservation (user_id, restaurant_id, number_of_people, date_of_visit, time_of_visit, is_confirmed, is_completed, title, description, created_at) VALUES
@@ -95,19 +94,22 @@ INSERT INTO reservation (user_id, restaurant_id, number_of_people, date_of_visit
 (7, 4, 2, '2027-12-24', '13:30:00', true, false, '2025-11-12 16:12:14');
 
 INSERT INTO reservation (user_id, restaurant_id, number_of_people, date_of_visit, time_of_visit, is_confirmed, is_completed, title, description, created_at) VALUES
-(7, 4, 7, '2027-12-18', '13:00:00', false, true, 'Jantar with Jabba', 'We would like to be seated next to a window', '2025-11-10 19:30:00'),
+(7, 4, 7, '2027-12-18', '13:00:00', false, true, 'Supper with Jabba', 'We would like to be seated next to a window', '2025-11-10 19:30:00'),
 (7, 4, 2, '2027-12-13', '12:30:00', true, false, 'Lunch with Vernon Roche', 'We love to come to your place!', '2025-11-05 23:32:00'),
 (7, 4, 4, '2027-12-25', '13:00:00', false, false, 'Lone fine dining experience', NULL, '2025-12-10 14:11:00');
 
 -- 6. REVIEWS AND REPLIES
 INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
+(8, 4, 'Great pizza.', 4, '2025-09-21');
+INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
+(9, 4, 'We really enjoyed our time there - I highly recommend this place :)', 5, '2025-04-18');
+INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
+(7, 4, 'The food was great, but the waiter was quite rude!.', 2, '2025-06-21');
+
+INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
 (7, 1, 'Absolutely fantastic!', 5, '2025-12-16');
 INSERT INTO "reply" (user_id, review_id, content, created_at) VALUES 
 (3, 1, 'Thank you so much, Grace!', '2025-12-18');
-
-INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
-(8, 2, 'Great pizza.', 3, '2025-09-21');
-
 
 -- 7. FAVOURITES
 INSERT INTO favourite (user_id, restaurant_id) VALUES

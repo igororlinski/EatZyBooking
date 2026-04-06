@@ -10,14 +10,13 @@
         @method('PUT')
 
         <label>Rating</label>
-        <input
-            type="number"
-            name="rating"
-            min="1"
-            max="5"
-            value="{{ old('rating', $review->rating) }}"
-            required
-        >
+        <div class="star-rating">
+            @for ($i = 1; $i <= 5; $i++)
+                <span class="star-btn {{ old('rating', $review->rating) >= $i ? 'active' : '' }}"
+                    data-value="{{ $i }}">★</span>
+            @endfor
+            <input type="hidden" name="rating" value="{{ old('rating', $review->rating) }}">
+        </div>
         @error('rating')
             <span class="error">{{ $message }}</span>
         @enderror
