@@ -32,13 +32,13 @@ INSERT INTO "customer" (id) VALUES (7), (8), (9), (10), (11), (12), (13);
 -- 3. RESTAURANTS
 INSERT INTO "restaurant" (owner_id, name, description, email, phone_number, address, opening_hours, capacity)
 VALUES
-    (3, 'The Gourmet Place', 'Our restaurant has 2 Michelin Stars. We serve you an experience, not just food.', 'contact@gourmetplace.com', '111222333', '123 Gourmet Street, Krakow', 
+    (3, 'The Gourmet Place', 'We are the most exclusive place in Lesser Poland. Our restaurant has 2 Michelin Stars. We serve you an experience, not just food.', 'contact@gourmetplace.com', '111222333', '123 Gourmet Street, Krakow', 
     '{"mon":["12:00-15:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["12:00-15:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 40),
     
     (4, 'Pizza Heaven', 'Authentic Neapolitan pizza and Italian wine. Free deliveries above 60 złotych.', 'ciao@pizzaheaven.com', '444555666', '456 Pizza Avenue, Krakow', 
     '{"mon":["12:00-15:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["12:00-15:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 60),
     
-    (4, 'Pasta Palace', 'Best ever homemade pasta, with original D.O.P. ingridients. Come check us out, -20% for first time customers!', 'info@pastapalace.com', '777888999', '789 Pasta Lane, Krakow', 
+    (4, 'Pasta Palace', 'Best ever homemade pasta, with original D.O.P. ingridients. In the mornings we also offer fantastic, authentic italian breakfast options. Come check us out, -20% for first time customers!', 'info@pastapalace.com', '777888999', '789 Pasta Lane, Krakow', 
     '{"mon":["12:00-15:00"],"tue":["12:00-15:00"],"wed":["12:00-15:00"],"thu":["12:00-18:00"],"fri":["13:00-19:00"],"sat":["12:00-23:59"],"sun":[]}', 50),
     
     (5, 'The Cozy Corner', 'A charming bistro in the heart of the Kazimierz district. Jazz music and cozy interior is what we love the most. Jam sessions every Friday at 5 pm.', 'hello@cozycorner.com', '123456789', '1 Cafe Street, Krakow', 
@@ -76,6 +76,8 @@ INSERT INTO reservation (user_id, restaurant_id, number_of_people, date_of_visit
 (7, 4, 2, '2025-03-14', '14:00:00', true, true, 'Dinner Reservation', NULL, '2025-03-10'),
 (8, 1, 2, '2025-03-17', '19:00:00', true, true, 'Special Dinner', 'Special occasion dinner', '2025-03-15'),
 (9, 4, 3, '2025-04-16', '18:30:00', true, true, 'Friends Gathering', NULL, '2025-04-10'),
+(11, 4, 4, '2026-01-19', '19:30:00', true, true, 'Four beers', NULL, '2026-01-10'),
+(10, 4, 4, '2025-06-19', '15:30:00', true, true, 'Dinner with friends', NULL, '2026-05-10'),
 (10, 2, 2, '2025-03-18', '12:30:00', true, true, 'Casual Dinner', NULL, '2025-03-15');
 
 INSERT INTO reservation (user_id, restaurant_id, number_of_people, date_of_visit, time_of_visit, is_confirmed, is_completed, title, description, created_at) VALUES
@@ -104,12 +106,14 @@ INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUE
 INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
 (9, 4, 'We really enjoyed our time there - I highly recommend this place :)', 5, '2025-04-18');
 INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
-(7, 4, 'The food was great, but the waiter was quite rude!.', 2, '2025-06-21');
+(11, 4, 'Amazing food, okay prices', 3, '2026-02-01');
+INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
+(10, 4, 'The food was great, but the waiter was quite rude!.', 2, '2025-06-21');
 
 INSERT INTO "review" (user_id, restaurant_id, content, rating, created_at) VALUES 
 (7, 1, 'Absolutely fantastic!', 5, '2025-12-16');
 INSERT INTO "reply" (user_id, review_id, content, created_at) VALUES 
-(3, 1, 'Thank you so much, Grace!', '2025-12-18');
+(3, 1, 'Thank you so much, Heidi!', '2025-12-18');
 
 -- 7. FAVOURITES
 INSERT INTO favourite (user_id, restaurant_id) VALUES
