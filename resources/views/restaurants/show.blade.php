@@ -5,11 +5,12 @@
 @section('content')
     <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;">
         <div style="flex: 1;">
-            <h2>{{ $restaurant->name }}</h2>
-            Restaurant description
+            <h2><strong>{{ $restaurant->name }}</strong></h2>
+            <strong>Restaurant's description</strong>
             <p>{{ $restaurant->description }}</p>
             
-            Restaurant addres: <p>{{ $restaurant->address }}</p>
+            <strong>Restaurant's addres</strong>
+            <p>{{ $restaurant->address }}</p>
         </div>
 
         <div style="flex: 1;">

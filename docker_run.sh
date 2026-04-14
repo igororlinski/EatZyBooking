@@ -3,6 +3,11 @@ set -e
 
 cd /var/www
 
+# Wait for the database
+until pg_isready -h postgres -p 5432; do
+  sleep 2
+done
+
 # Create required storage directories
 mkdir -p /var/www/storage/framework/cache/data \
          /var/www/storage/framework/sessions \

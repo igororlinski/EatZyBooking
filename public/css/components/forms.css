@@ -28,6 +28,15 @@ form.card-form textarea {
   transition: border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
+form.card-form input[type="hidden"] {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  height: auto;
+  box-shadow: none;
+}
+
 #content>form input:focus,
 #content>form textarea:focus,
 form.card-form input:focus,
@@ -99,6 +108,41 @@ form.card-form textarea:focus {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-btn {
+    font-size: 2rem;
+    color: #d1d5db;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    transition: color 0.1s ease, transform 0.1s ease;
+    user-select: none;
+    line-height: 1;
+    position: relative;
+    z-index: 10;
+}
+
+.star-btn:hover {
+    transform: scale(1.2);
+}
+
+.star-btn.active {
+    color: #f59e0b !important;
+}
+
+.star-btn.hovered {
+    color: #fbbf24 !important;
 }
 
 @media (max-width: 25em) {

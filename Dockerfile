@@ -7,6 +7,8 @@ FROM php:8.3-fpm
 # Also remove default nginx site to avoid conflicts.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+       postgresql-client \
+       netcat-openbsd \
        nginx \
        libpq-dev \
        ca-certificates \
@@ -14,6 +16,7 @@ RUN apt-get update \
        unzip \
        git \
     && docker-php-ext-install pdo_pgsql \
+    && docker-php-ext-enable pdo_pgsql \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f /etc/nginx/sites-enabled/default
 
